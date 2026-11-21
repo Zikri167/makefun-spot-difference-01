@@ -1,0 +1,42 @@
+/* Page chrome around the Lantern Lane canvas: dark backdrop, centered game,
+   system fonts only, nothing loaded from the network. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: #141222;
+  color: #f6ead2;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.stage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+}
+
+canvas#game {
+  width: min(1280px, 96vw);
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  background: #1d2233;
+}
+
+.hint-line {
+  margin: 0;
+  font-size: 14px;
+  color: #b9b2cc;
+  text-align: center;
+}
